@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Fact Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    .fact-box {
+      min-height: 80px;
+      margin-bottom: 24px;
+      font-size: 1.1rem;
+      color: #444;
+      padding: 16px;
+      border-radius: 8px;
+      background: #f7fafc;
+      border: 1px solid #e0e0e0;
+      transition: background 0.3s;
+    }
+
+    button {
+      background: #4f8cff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌍 Fun Fact Generator</h1>
+    <div id="fact-box" class="fact-box">
+      Click the button to see a fun fact about Planet Earth!
+    </div>
+    <button id="new-fact-btn">Show Me a Fun Fact</button>
+  </div>
+  <script>
+    const facts = [
+            "Cats are crepuscular, which means they are most active during dawn and dusk.",
+            "A cat's nose print is unique, just like a human fingerprint.",
+            "Cats can jump up to six times their height.",
+            "The average cat sleeps for about 12-16 hours a day.",
+            "Cats have a third eyelid, called a nictitating membrane, that helps protect their eyes.",
+            "A group of cats is called a clowder.",
+            "Cats can make over 100 different vocalizations, while dogs can only make about 10.",
+            "The oldest known cat lived to be 38 years old.",
+            "Cats use their whiskers to help them navigate and sense their environment.",
+            "Cats have a specialized 'purr box' in their throat that can vibrate at a variety of frequencies, and its believed this can promote healing."
+        ];
+
+    const factBox = document.getElementById('fact-box');
+    const newFactBtn = document.getElementById('new-fact-btn');
+
+    function showRandomFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factBox.textContent = facts[randomIndex];
+    }
+
+    newFactBtn.addEventListener('click', showRandomFact);
+  </script>
+</body>
+</html>
