@@ -25,7 +25,7 @@ An AI-powered fun fact generator built with plain HTML, CSS, and JavaScript — 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/fun-fact-generator.git
+git clone https://github.com/Nepul1234/Fun-Facts-Generator-App.git
 cd fun-fact-generator
 ```
 
